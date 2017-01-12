@@ -97,7 +97,7 @@ public class DrawSpriteDemo : GameChip
         time += timeDelta;
 
         // We'll use modulus to determine when it's time to change the sprite frame.
-        if (time % 9 == 0)
+        if (time > 0.09f)
         {
 
             // If time modulus 9 is 0 we'll increase the frame number to advance the animation.
@@ -107,6 +107,7 @@ public class DrawSpriteDemo : GameChip
             // MathUtil.Repeat() will loop a value based on the maximum value supplied. It's important
             // to use this sparingly since it could potentially slow your game down.
 
+            time = 0f;
         }
 
     }
