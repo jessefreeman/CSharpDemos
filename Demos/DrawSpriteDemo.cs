@@ -11,6 +11,7 @@
 // Jesse Freeman - @JesseFreeman
 // Christer Kaitila - @McFunkypants
 // Pedro Medeiros - @saint11
+// Shawn Rakowski - @shwany
 // 
 
 using System;
@@ -28,8 +29,6 @@ using PixelVisionSDK.Engine.Utils;
 /// </summary>
 public class DrawSpriteDemo : GameChip
 {
-
-    private int frame;
 
     /// <summary>
     ///     These values represent the shell's position, speed, animation
@@ -50,6 +49,8 @@ public class DrawSpriteDemo : GameChip
     };
 
     private readonly int speed = 100;
+
+    private int frame;
     private float time;
 
     /// <summary>
