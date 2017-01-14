@@ -14,8 +14,8 @@
 // Shawn Rakowski - @shwany
 // 
 
-using PixelVisionSDK.Engine.Chips.Game;
-using PixelVisionSDK.Engine.Utils;
+using PixelVisionSDK.Chips;
+using PixelVisionSDK.Utils;
 
 //
 // The Stress Test Demo highlights the sprite rendering limitation of Pixel Vision 8. By default,

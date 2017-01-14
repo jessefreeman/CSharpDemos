@@ -14,7 +14,7 @@
 // Shawn Rakowski - @shwany
 // 
 
-using PixelVisionSDK.Engine.Chips.Game;
+using PixelVisionSDK.Chips;
 
 // The Font Demo illustrates how to render text to the DisplayChip.You'll learn how to display fronts as sprites
 // and how to also write font data into the ScreenBufferChip optimize draw calls.

@@ -14,8 +14,8 @@
 // Shawn Rakowski - @shwany
 // 
 
-using PixelVisionSDK.Engine.Chips.Data;
-using PixelVisionSDK.Engine.Chips.Game;
+using PixelVisionSDK;
+using PixelVisionSDK.Chips;
 
 // This demo assumes you have implemented your input solution to capture keyboard input by
 // extending the ButtonState class and registering it with the ControllerChip.You can see

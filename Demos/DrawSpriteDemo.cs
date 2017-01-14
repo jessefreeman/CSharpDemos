@@ -15,9 +15,9 @@
 // 
 
 using System;
-using PixelVisionSDK.Engine.Chips.Data;
-using PixelVisionSDK.Engine.Chips.Game;
-using PixelVisionSDK.Engine.Utils;
+using PixelVisionSDK;
+using PixelVisionSDK.Chips;
+using PixelVisionSDK.Utils;
 
 // Let's take a look at how to draw sprites to the display. The SpriteChip handles rendering each 
 // 8 x 8 px sprite on the screen.For this demo, we'll need to create a new game class that contains

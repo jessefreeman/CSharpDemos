@@ -14,9 +14,9 @@
 // Shawn Rakowski - @shwany
 // 
 
-using PixelVisionSDK.Engine.Chips.Data;
-using PixelVisionSDK.Engine.Chips.Game;
-using PixelVisionSDK.Engine.Utils;
+using PixelVisionSDK;
+using PixelVisionSDK.Chips;
+using PixelVisionSDK.Utils;
 
 /// <summary>
 ///     We are going to extend the GameChip class and override its Init(), Update() and Draw() methods.

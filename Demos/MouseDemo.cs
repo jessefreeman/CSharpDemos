@@ -14,8 +14,8 @@
 // Shawn Rakowski - @shwany
 // 
 
-using PixelVisionSDK.Engine.Chips.Data;
-using PixelVisionSDK.Engine.Chips.Game;
+using PixelVisionSDK;
+using PixelVisionSDK.Chips;
 
 // The Mouse Demo shows off how to capture mouse input and display a cursor on the screen.
 // Pixel Vision 8 requires the runner to supply mouse data via the ControllerChip.You will
