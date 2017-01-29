@@ -19,9 +19,6 @@
 -- attempts to render more sprite than the system can handle. The outcome is that additional draw
 -- calls are ignored and the engine maintains its optimal performance.
 
--- The API Bridge allows you're Lua game to talk to the core PV8 APIs
-local apiBridge = LuaBridge()
-
 -- These are some fields we'll use for performing the stress test.
 local delay = 0
 local delayTime = 2

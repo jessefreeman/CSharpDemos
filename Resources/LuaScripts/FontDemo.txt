@@ -17,9 +17,6 @@
 -- The Font Demo illustrates how to render text to the DisplayChip.You'll learn how to display fronts as sprites
 -- and how to also write font data into the ScreenBufferChip optimize draw calls.
 
--- The API Bridge allows you're Lua game to talk to the core PV8 APIs
-local apiBridge = LuaBridge()
-
 -- This string represents the default characters fonts can display. Font sprites map to the ASCII
 -- values of each character starting with an empty space at 32.
 local lines = {" !\"#$%&'()*+,-",

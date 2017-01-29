@@ -19,9 +19,6 @@
 -- need to implement the IMouseInput interface and register a custom Mouse Class with the
 -- ControllerChip in order for this demo to work.
 
--- The API Bridge allows you're Lua game to talk to the core PV8 APIs
-local apiBridge = LuaBridge()
-
 -- We need to create some fields to store the mouse cursor's sprites, dimensions, position, and offset.
 local cursorSprites = {4, 5, 10, 11}
 local cursorWidth = 2
