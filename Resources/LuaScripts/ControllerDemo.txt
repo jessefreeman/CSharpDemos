@@ -14,9 +14,6 @@
 -- Shawn Rakowski - @shwany
 --
 
--- The API Bridge allows you're Lua game to talk to the core PV8 APIs
-local apiBridge = LuaBridge()
-
 -- Before we can display the input, we'll want to track each button state. These Boolean Arrays will 
 -- help us track if each button is down (false) or up (true).
 local player1States = {}

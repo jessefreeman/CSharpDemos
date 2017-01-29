@@ -16,9 +16,6 @@
 
 -- We are going to extend the GameChip class and override its Init(), Update() and Draw() methods.
 
--- The API Bridge allows you're Lua game to talk to the core PV8 APIs
-local apiBridge = LuaBridge()
-
 -- These vectors represent directions we can scroll the map in.
 local dir =
 {

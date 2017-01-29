@@ -14,9 +14,6 @@
 -- Shawn Rakowski - @shwany
 --
 
--- The API Bridge allows you're Lua game to talk to the core PV8 APIs
-local apiBridge = LuaBridge()
-
 -- These values represent the shell's position, speed, animation
 -- time and frame.
 local shellAPos = {x = 0, y = 8*8}
