@@ -56,11 +56,16 @@ function Draw()
 	-- we can directly clear the DisplayChip by calling the Clear() method.
 	apiBridge:Clear()
 
+	-- It's best to define these outside of the for loop since we only need to set the value once.
+	local width = apiBridge.displayWidth
+	local height = apiBridge.displayHeight
+
 	-- This loop will create a random x and y value based on the display's dimension then attempt to
 	-- draw a sprite.
 	for i=0,totalSprites,1 do
-		x = math.random(0,apiBridge.displayWidth)
-		y = math.random(0,apiBridge.displayHeight)
+		x = math.random(0,width)
+		y = math.random(0,height)
 		apiBridge:DrawSprite( i + 12, x, y, false, false, true, 0)
 	end
+
 end
