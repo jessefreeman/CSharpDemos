@@ -61,19 +61,13 @@ public class DrawSpriteDemo : GameChip
     public override void Init()
     {
 
-        // Here we are starting by changing the background color and telling
-        // the DisplayChip to wrap.
+        // Here we are starting by changing the background color
         apiBridge.ChangeBackgroundColor(32);
-        apiBridge.ToggleDisplayWrap(true);
-
-        // Here we are rebuilding the screen buffer so we can draw tile and 
-        // fonts to it. This will cut down on our draw calls.
-        apiBridge.RebuildScreenBuffer();
 
         // With the ScreenBuffer ready, we can now draw fonts into it. Here
         // we are creating two new labels to display under our demo sprites.
-        apiBridge.DrawFontToBuffer("Sprite Test", 1, 1, "large-font", 0);
-        apiBridge.DrawFontToBuffer("Position Wrap Test", 1, 6, "large-font");
+        apiBridge.DrawTileText("Sprite Test", 1, 1, "large-font", 0);
+        apiBridge.DrawTileText("Position Wrap Test", 1, 6, "large-font");
 
     }
 
@@ -144,12 +138,12 @@ public class DrawSpriteDemo : GameChip
         // setting so that the turtle will appear on the opposite side of the screen even when the x or y
         // position is out of bounds.
         apiBridge.DrawSprites(shellSprites[frame], shellAPos.x, shellAPos.y, 2, false, false, true, 0);
-        apiBridge.DrawFont("(" + shellAPos.x + "," + shellAPos.y + ")", shellAPos.x, shellAPos.y + 20, "large-font", 0);
+        apiBridge.DrawSpriteText("(" + shellAPos.x + "," + shellAPos.y + ")", shellAPos.x, shellAPos.y + 20, "large-font", 0);
 
         // The last thing we are going to do is draw text below each of our moving turtles so we can see the
         // x and y position as they wrap around the display.
         apiBridge.DrawSprites(shellSprites[frame], shellBPos.x, shellBPos.y, 2, false, false, true, 0);
-        apiBridge.DrawFont("(" + shellBPos.x + "," + shellBPos.y + ")", shellBPos.x, shellBPos.y + 20, "large-font", 0);
+        apiBridge.DrawSpriteText("(" + shellBPos.x + "," + shellBPos.y + ")", shellBPos.x, shellBPos.y + 20, "large-font", 0);
 
     }
 

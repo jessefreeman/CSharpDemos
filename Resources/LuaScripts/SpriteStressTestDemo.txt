@@ -24,6 +24,20 @@ local delay = 0
 local delayTime = 2
 local totalSprites = 1000;
 
+-- It's best to define these outside of the for loop since we only need to set the value once.
+local width = 0
+local height = 0
+local x = 0
+local y = 0
+
+function Init()
+
+	-- Set the width and height so we can reference them later in the draw loop.
+	width = apiBridge.displayWidth
+	height = apiBridge.displayHeight
+
+end
+
 -- The Update() method is part of the game's life cycle. The engine calls Update() on every frame before
 -- the Draw() method. It accepts one argument, timeDelta, which is the difference in milliseconds since
 -- the last frame. We are going to use this timeDelta value to keep track of the time before changing
@@ -55,10 +69,6 @@ function Draw()
 	-- Clearing the display on each frame is important. Since we are not using the ScreenBufferChip,
 	-- we can directly clear the DisplayChip by calling the Clear() method.
 	apiBridge:Clear()
-
-	-- It's best to define these outside of the for loop since we only need to set the value once.
-	local width = apiBridge.displayWidth
-	local height = apiBridge.displayHeight
 
 	-- This loop will create a random x and y value based on the display's dimension then attempt to
 	-- draw a sprite.

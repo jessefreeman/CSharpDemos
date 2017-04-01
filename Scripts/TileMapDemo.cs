@@ -53,7 +53,6 @@ public class TilemapDemo : GameChip
         // Before we start, we need to set a background color and rebuild the ScreenBufferChip. The screen buffer 
         // allows us to draw our fonts into the background layer to save on draw calls.
         apiBridge.ChangeBackgroundColor(0);
-        apiBridge.RebuildScreenBuffer();
 
         // Here we are going to calculate the tile size for the map and the size of the visible grid.
         tileSize = apiBridge.spriteWidth * 2;
@@ -104,7 +103,7 @@ public class TilemapDemo : GameChip
 
         // For dynamic text, such as the time value we are tracking, it will be too expensive to update the 
         // ScreenBufferChip on each frame. So, in this case, we are going to display the map's scroll position.
-        apiBridge.DrawFont("Scroll (" + scrollPos.x + "," + scrollPos.y + ")", 8, 0, "message-font", -4);
+        apiBridge.DrawSpriteText("Scroll (" + scrollPos.x + "," + scrollPos.y + ")", 8, 0, "message-font");
 
     }
 

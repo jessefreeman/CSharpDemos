@@ -37,7 +37,6 @@ function Init()
 	-- Before we start, we need to set a background color and rebuild the ScreenBufferChip. The screen buffer
 	-- allows us to draw our fonts into the background layer to save on draw calls.
 	apiBridge:ChangeBackgroundColor(32)
-	apiBridge:RebuildScreenBuffer()
 
 	-- Pixel Vision 8 limits the number of sprites it can render to the display on each frame. This value is
 	-- set to 64 by default. Since each font character is a single sprite it would be too expensive to draw 

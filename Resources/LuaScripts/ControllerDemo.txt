@@ -32,14 +32,13 @@ function Init()
 	-- Before we start, we need to set a background color and rebuild the ScreenBufferChip. The screen buffer
 	-- allows us to draw our fonts into the background layer to save on draw calls.
 	apiBridge:ChangeBackgroundColor(32)
-	apiBridge:RebuildScreenBuffer()
 
 	-- We need to display some default text for our demo explaining what is going on. This text will just be 
 	-- drawn into the screen buffer.
 	apiBridge:DrawFontToBuffer("CONTROLLER TEST", pos.x , pos.y - 2, "large-font", 0)
 	local text = "    UP:\n  DOWN:\n RIGHT:\n  LEFT:\n     A:\n     B:\nSELECT:\n START:\n"
-	apiBridge:DrawFontToBuffer("PLAYER ONE\n"..text, pos.x, pos.y, "small-font", -4)
-	apiBridge:DrawFontToBuffer("PLAYER TWO\n"..text, pos.x + pos.xOffset, pos.y, "small-font", -4)
+	apiBridge:DrawFontToBuffer("PLAYER ONE\n"..text, pos.x, pos.y, "large-font", -4)
+	apiBridge:DrawFontToBuffer("PLAYER TWO\n"..text, pos.x + pos.xOffset, pos.y, "large-font", -4)
 
 end
 
@@ -80,14 +79,14 @@ function Draw()
 	for i=1,totalButtons do
 		x = (pos.x + 8) * 4
 		y = (( i + pos.y) * 8) + pos.y 
-		apiBridge:DrawFont(player1States[i] == true and "1" or "0", x, y - 3, "small-font", -4)
+		apiBridge:DrawSpriteText(player1States[i] == true and "1" or "0", x, y - 3, "large-font")
 	end
 
 	-- We'll do the same thing for player two but adjust for the text being in the second column by adding the xOffset the x value.
 	for i=1,totalButtons do
 		x = (pos.x + (pos.xOffset * 2) + 8) * 4
 		y = (( i + pos.y) * 8) + pos.y 
-		apiBridge:DrawFont(player2States[i] == true and "1" or "0", x, y - 3, "small-font", -4)
+		apiBridge:DrawSpriteText(player2States[i] == true and "1" or "0", x, y - 3, "large-font")
 	end
 	
 end
