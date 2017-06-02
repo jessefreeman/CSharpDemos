@@ -46,48 +46,48 @@ public class SpriteStressTestDemo : GameChip
     ///     the last frame. We are going to use this timeDelta value to keep track of the time before changing
     ///     the background color.
     /// </summary>
-    public override void Update(float timeDelta)
-    {
-
-        // We start by adding the time delta to the delay.
-        delay += timeDelta;
-
-        // Next, we will need to test if the delay value is greater than the delayTime field we set up at the 
-        // beginning of our class.
-        if (delay > delayTime)
-        {
-
-            // After the appropriate delay, we can change the background color a random value. We'll cap this 
-            // between 0 and 63.
-            apiBridge.ChangeBackgroundColor(MathUtil.RandomRange(0, 63));
-
-            // We need to reset the delay so we can start tracking it again on the next frame.
-            delay = 0;
-
-        }
-
-    }
-
-    /// <summary>
-    ///     The Draw() method is part of the game's life cycle. It is called after Update() and
-    ///     is where all of our draw calls should go. We'll be using this to render sprites to the display.
-    /// </summary>
-    public override void Draw()
-    {
-
-        // Clearing the display on each frame is important. Since we are not using the ScreenBufferChip, 
-        // we can directly clear the DisplayChip by calling the Clear() method.
-        apiBridge.Clear();
-
-        // This loop will create a random x and y value based on the display's dimension then attempt to 
-        // draw a sprite.
-        for (var i = 0; i < totalSprites; i++)
-        {
-            var x = MathUtil.RandomRange(0, apiBridge.displayWidth);
-            var y = MathUtil.RandomRange(0, apiBridge.displayHeight);
-            apiBridge.DrawSprite(i + 12, x, y, false, false, true, 0);
-        }
-
-    }
+//    public override void Update(float timeDelta)
+//    {
+//
+//        // We start by adding the time delta to the delay.
+//        delay += timeDelta;
+//
+//        // Next, we will need to test if the delay value is greater than the delayTime field we set up at the 
+//        // beginning of our class.
+//        if (delay > delayTime)
+//        {
+//
+//            // After the appropriate delay, we can change the background color a random value. We'll cap this 
+//            // between 0 and 63.
+//            apiBridge.ChangeBackgroundColor(MathUtil.RandomRange(0, 63));
+//
+//            // We need to reset the delay so we can start tracking it again on the next frame.
+//            delay = 0;
+//
+//        }
+//
+//    }
+//
+//    /// <summary>
+//    ///     The Draw() method is part of the game's life cycle. It is called after Update() and
+//    ///     is where all of our draw calls should go. We'll be using this to render sprites to the display.
+//    /// </summary>
+//    public override void Draw()
+//    {
+//
+//        // Clearing the display on each frame is important. Since we are not using the ScreenBufferChip, 
+//        // we can directly clear the DisplayChip by calling the Clear() method.
+//        apiBridge.Clear();
+//
+//        // This loop will create a random x and y value based on the display's dimension then attempt to 
+//        // draw a sprite.
+//        for (var i = 0; i < totalSprites; i++)
+//        {
+//            var x = MathUtil.RandomRange(0, apiBridge.displayWidth);
+//            var y = MathUtil.RandomRange(0, apiBridge.displayHeight);
+//            apiBridge.DrawSprite(i + 12, x, y, false, false, true, 0);
+//        }
+//
+//    }
 
 }
